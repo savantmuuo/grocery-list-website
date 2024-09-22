@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grocery List with Interactivity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 id="dynamic-header">Welcome to My Grocery List</h1>
+            <p>Manage your grocery items efficiently</p>
+            <!-- Dropdown menu -->
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#">Home</a>
+                    <a href="#">Add Item</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Help</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+            <h2>Add Grocery Items</h2>
+            <!-- Form with dynamic validation -->
+            <form id="grocery-form">
+                <input type="text" id="grocery-item" placeholder="Enter grocery item" required>
+                <input type="number" id="grocery-quantity" placeholder="Quantity" min="1" required>
+                <select id="category-select">
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Snacks">Snacks</option>
+                </select>
+                <button type="submit">Add Item</button>
+            </form>
+            <ul id="grocery-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
